@@ -251,7 +251,11 @@ const IntegrationsContainer = ({
                 <Button
                   color="secondary"
                   data-testid={`connect-${variant || "other"}-apps`}
-                  href={variant ? `/apps/categories/${variant}` : "/apps/categories/other"}>
+                  href={
+                    variant
+                      ? `/apps/categories/${variant === "conferencing" ? "video" : variant}`
+                      : "/apps/categories/other"
+                  }>
                   {t(`connect_${variant || "other"}_apps`)}
                 </Button>
               }
