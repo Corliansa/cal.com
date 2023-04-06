@@ -1228,7 +1228,7 @@
   "set_availability_getting_started_subtitle_1": "予約可能な時間の範囲を定義します",
   "set_availability_getting_started_subtitle_2": "これらの項目は、後ほど状態ページからすべてカスタマイズすることができます。",
   "connect_calendars_from_app_store": "App Store からさらにカレンダーを追加することができます",
-  "connect_conference_apps": "会議アプリを接続",
+  "connect_conferencing_apps": "会議アプリを接続",
   "connect_calendar_apps": "カレンダーアプリを接続",
   "connect_payment_apps": "決済アプリを接続",
   "connect_automation_apps": "自動化アプリを接続する",
