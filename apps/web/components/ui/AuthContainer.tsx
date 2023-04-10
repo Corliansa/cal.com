@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Link from "next/link";
 
 import { APP_NAME, LOGO } from "@calcom/lib/constants";
 import { HeadSeo } from "@calcom/ui";
@@ -20,7 +21,9 @@ export default function AuthContainer(props: React.PropsWithChildren<Props>) {
       <HeadSeo title={props.title} description={props.description} />
       {props.showLogo && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img className="mb-auto h-4" src={LOGO} alt={`${APP_NAME} Logo`} />
+        <Link href="/" className="mx-auto mb-auto">
+          <img className="h-4" src={LOGO} alt={`${APP_NAME} Logo`} />
+        </Link>
       )}
 
       <div className={classNames(props.showLogo ? "text-center" : "", "sm:mx-auto sm:w-full sm:max-w-md")}>
