@@ -66,7 +66,7 @@ export default function Login({
 
   const telemetry = useTelemetry();
 
-  let callbackUrl = typeof router.query?.callbackUrl === "string" ? router.query.callbackUrl : "";
+  let callbackUrl = typeof router.query?.callbackUrl === "string" ? router.query.callbackUrl : "/event-types";
 
   if (/"\//.test(callbackUrl)) callbackUrl = callbackUrl.substring(1);
 
@@ -206,7 +206,7 @@ export default function Login({
                     StartIcon={FaGoogle}
                     onClick={async (e) => {
                       e.preventDefault();
-                      await signIn("google");
+                      await signIn("google", { callbackUrl });
                     }}>
                     {t("signin_with_google")}
                   </Button>
