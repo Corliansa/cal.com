@@ -1,12 +1,11 @@
 import type { GetServerSidePropsContext, NextPage } from "next";
-import type { Session } from "next-auth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { getServerSession } from "@calcom/features/auth/lib/getServerSession";
 import { APP_NAME, COMPANY_NAME, LOGO } from "@calcom/lib/constants";
 
-export const Index: NextPage<{ session: Session | null }> = ({ session }) => {
+export const Index: NextPage<{ session: { user: { id?: string } } }> = ({ session }) => {
   const { push } = useRouter();
   return (
     <div className="isolate min-h-screen bg-white text-gray-700">
@@ -69,7 +68,7 @@ export const Index: NextPage<{ session: Session | null }> = ({ session }) => {
 export async function getServerSideProps({ req, res }: GetServerSidePropsContext) {
   const session = await getServerSession({ req, res });
 
-  return { props: { session } };
+  return { props: { session: { user: { id: session?.user.id } } } };
 }
 
 export default Index;
