@@ -68,7 +68,7 @@ export const Index: NextPage<{ session: { user: { id?: string } } }> = ({ sessio
 export async function getServerSideProps({ req, res }: GetServerSidePropsContext) {
   const session = await getServerSession({ req, res });
 
-  return { props: { session: { user: { id: session?.user.id } } } };
+  return { props: { session: { user: { id: session?.user.id ?? null } } } };
 }
 
 export default Index;
