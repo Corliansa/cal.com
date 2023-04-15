@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 
 import { APP_NAME, LOGO, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
@@ -6,6 +7,10 @@ import { APP_NAME, LOGO, SUPPORT_MAIL_ADDRESS } from "@calcom/lib/constants";
 export const Terms: NextPage = () => {
   return (
     <div className="isolate min-h-screen bg-white text-gray-700">
+      <Head>
+        <title>Terms of Service | {APP_NAME}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="px-6 pt-12 lg:px-8">
         <div>
           <nav className="flex h-9 justify-center" aria-label="Global">

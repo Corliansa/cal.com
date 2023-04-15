@@ -1,4 +1,5 @@
 import type { GetServerSidePropsContext, NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -9,6 +10,10 @@ export const Index: NextPage<{ session: { user: { id?: string } } }> = ({ sessio
   const { push } = useRouter();
   return (
     <div className="isolate min-h-screen bg-white text-gray-700">
+      <Head>
+        <title>{APP_NAME}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="px-6 pt-12 lg:px-8">
         <div>
           <nav className="flex h-9 justify-center" aria-label="Global">
