@@ -153,7 +153,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
   const session = await getServerSession({ req, res });
 
   if (session) {
-    res.writeHead(302, { Location: "/" });
+    res.writeHead(302, { Location: "/event-types" });
     res.end();
     return { props: {} };
   }

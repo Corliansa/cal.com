@@ -273,7 +273,7 @@ const _getServerSideProps = async function getServerSideProps(context: GetServer
   if (session) {
     return {
       redirect: {
-        destination: "/",
+        destination: "/event-types",
         permanent: false,
       },
     };

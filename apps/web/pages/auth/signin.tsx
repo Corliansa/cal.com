@@ -37,7 +37,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const providers = await getProviders();
   if (session) {
     return {
-      redirect: { destination: "/" },
+      redirect: { destination: "/event-types" },
     };
   }
   return {
