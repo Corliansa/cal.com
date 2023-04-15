@@ -61,6 +61,8 @@ function useAddAppMutation(_type: App["type"] | null, allOptions?: UseAddAppMuta
     const stateStr = encodeURIComponent(JSON.stringify(state));
     const searchParams = `?state=${stateStr}`;
 
+    console.log(state);
+
     const res = await fetch(`/api/integrations/${type}/add` + searchParams);
 
     if (!res.ok) {
@@ -70,7 +72,7 @@ function useAddAppMutation(_type: App["type"] | null, allOptions?: UseAddAppMuta
 
     const json = await res.json();
     const externalUrl = /https?:\/\//.test(json.url) && !json.url.startsWith(window.location.origin);
-
+    console.log(json);
     if (!isOmniInstall) {
       gotoUrl(json.url, json.newTab);
       return { setupPending: externalUrl || json.url.endsWith("/setup") };
