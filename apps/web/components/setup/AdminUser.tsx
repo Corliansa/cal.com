@@ -87,7 +87,7 @@ export const AdminUser = (props: { onSubmit: () => void; onError: () => void; on
     if (response.status === 200) {
       await signIn("credentials", {
         redirect: false,
-        callbackUrl: "/",
+        callbackUrl: "/event-types",
         email: data.email_address.toLowerCase(),
         password: data.password,
       });

@@ -14,7 +14,7 @@ export default function Page() {
     const { code } = router.query;
 
     signIn("saml-idp", {
-      callbackUrl: "/",
+      callbackUrl: "/event-types",
       code,
     });
   }, []);

@@ -55,7 +55,7 @@ const UserProfile = (props: IUserProfileProps) => {
         }
 
         await utils.viewer.me.refetch();
-        router.push("/");
+        router.push("/event-types");
       }
     },
     onError: () => {
