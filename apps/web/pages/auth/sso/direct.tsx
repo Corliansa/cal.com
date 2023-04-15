@@ -20,7 +20,7 @@ export default function Page({ samlTenantID, samlProductID }: inferSSRProps<type
   signIn(
     "saml",
     {
-      callbackUrl: "/",
+      callbackUrl: "/event-types",
     },
     { tenant: samlTenantID, product: samlProductID }
   );
