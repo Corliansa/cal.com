@@ -24,10 +24,12 @@ export const Index: NextPage<{ session: { user: { id?: string } } }> = ({ sessio
       <main>
         <div className="relative px-6 lg:px-8">
           <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
-            <h1 className="text-5xl font-semibold tracking-tight sm:text-center sm:text-7xl">Calendso</h1>
+            <h1 className="text-5xl font-semibold tracking-tight sm:text-center sm:text-7xl">
+              Scheduling infrastructure for everyone.
+            </h1>
             <p className="my-6 text-lg leading-8 text-gray-600 sm:text-center">
-              The open source Calendly alternative. You are in charge of your own data, workflow and
-              appearance.
+              Connect your favorite apps. {APP_NAME} works with all apps already in your scheduling flow
+              ensuring everything works perfectly together.
             </p>
             <div className="flex items-center justify-center gap-4">
               <button
@@ -46,7 +48,7 @@ export const Index: NextPage<{ session: { user: { id?: string } } }> = ({ sessio
               </Link>
             </div>
             <hr className="mt-6 mb-3 border-gray-300" />
-            <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center justify-between text-xs">
               <div>
                 &copy; {new Date().getFullYear()}{" "}
                 <Link href="https://go.cal.com/credits" target="_blank" className="hover:underline">
