@@ -533,7 +533,7 @@ const BookingPage = ({
               })}{" "}
           | {APP_NAME}
         </title>
-        <link rel="icon" href="/favico.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <BookingPageTagManager eventType={eventType} />
       <main
