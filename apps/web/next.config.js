@@ -81,6 +81,7 @@ const pages = glob
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  output: "standalone",
   i18n,
   productionBrowserSourceMaps: true,
   /* We already do type check on GH actions */
